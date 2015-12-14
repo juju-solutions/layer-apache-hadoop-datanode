@@ -5,11 +5,8 @@ description: >
   Hadoop is a software platform that lets one easily write and
   run applications that process vast amounts of data.
 
-  This charm manages the compute slave node (DataNode + NodeManager).
+  This charm manages the storage node (DataNode) for HDFS.
 tags: ["applications", "bigdata", "hadoop", "apache"]
 provides:
-  ganglia:
-    interface: monitor
-requires:
-  namenode:
-    interface: hdfs
+  datanode:
+    interface: datanode
