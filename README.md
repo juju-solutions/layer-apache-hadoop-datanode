@@ -6,7 +6,7 @@ using a simple programming model.
 
 This charm deploys a compute / slave node running the NodeManager
 and DataNode components of
-[Apache Hadoop 2.4.1](http://hadoop.apache.org/docs/r2.4.1/),
+[Apache Hadoop 2.7.1](http://hadoop.apache.org/docs/r2.7.1/),
 which provides computation and storage resources to the platform.
 
 ## Usage
