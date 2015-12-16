@@ -8,5 +8,5 @@ description: >
   This charm manages the storage node (DataNode) for HDFS.
 tags: ["applications", "bigdata", "hadoop", "apache"]
 provides:
-  datanode:
+  namenode:
     interface: datanode
