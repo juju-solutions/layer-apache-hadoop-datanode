@@ -12,19 +12,6 @@ def blocked():
 
 
 @when('hadoop.installed', 'namenode.related')
-def set_spec(namenode):
-    hadoop = get_hadoop_base()
-    namenode.set_datanode_spec(hadoop.spec())
-
-
-@when('namenode.spec.mismatch')
-def spec_mismatch(namenode):
-    hookenv.status_set('blocked',
-                       'Spec mismatch with NameNode: {} != {}'.format(
-                           namenode.datanode_spec(), namenode.namenode_spec()))
-
-
-@when('hadoop.installed', 'namenode.related')
 @when_not('namenode.spec.mismatch', 'namenode.ready', 'datanode.started')
 def waiting(namenode):  # pylint: disable=unused-argument
     hookenv.status_set('waiting', 'Waiting for NameNode')
