@@ -1,1 +1,15 @@
 includes: ['layer:hadoop-base', 'interface:datanode']
+options:
+  hadoop-base:
+    ports:
+        # Ports that need to be exposed, overridden, or manually specified.
+        # Only expose ports serving a UI or external API (i.e., namenode and
+        # resourcemanager).  Communication among units within the cluster does
+        # not need ports to be explicitly opened.
+        dn_webapp_http:
+            port: 50075
+            exposed_on: 'datanode'
+        # TODO: support SSL
+        #dn_webapp_https:
+        #    port: 50475
+        #    exposed_on: 'datanode'
