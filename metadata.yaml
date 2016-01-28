@@ -9,4 +9,4 @@ description: >
 tags: ["applications", "bigdata", "hadoop", "apache"]
 provides:
   namenode:
-    interface: datanode
+    interface: dfs-slave

@@ -1,4 +1,4 @@
-includes: ['layer:hadoop-base', 'interface:datanode']
+includes: ['layer:hadoop-base', 'interface:dfs-slave']
 options:
   hadoop-base:
     ports:

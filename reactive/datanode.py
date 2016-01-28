@@ -14,7 +14,6 @@ def start_datanode(namenode):
     utils.update_kv_hosts(namenode.hosts_map())
     utils.manage_etc_hosts()
     hdfs.start_datanode()
-    namenode.register()
     hadoop.open_ports('datanode')
     set_state('datanode.started')
 
