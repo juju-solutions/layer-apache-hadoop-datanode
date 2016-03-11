@@ -1,5 +1,5 @@
 from charms.reactive import when, when_not, set_state, remove_state
-from charms.hadoop import get_hadoop_base
+from charms.layer.hadoop_base import get_hadoop_base
 from jujubigdata.handlers import HDFS
 from jujubigdata import utils
 

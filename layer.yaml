@@ -1,4 +1,7 @@
-includes: ['layer:hadoop-base', 'interface:dfs-slave']
+includes:
+  - 'layer:hadoop-base'
+  - 'layer:hadoop-ganglia'
+  - 'interface:dfs-slave'
 options:
   hadoop-base:
     ports:
