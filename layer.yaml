@@ -17,3 +17,17 @@ options:
         #dn_webapp_https:
         #    port: 50475
         #    exposed_on: 'datanode'
+        jn_http:
+            port: 8480
+            exposed_on: 'datanode'
+        #jn_https:
+        #    port: 8481
+        #    exposed_on: 'datanode'
+        journalnode:
+            port: 8485
+        jn_webapp_http:
+            port: 8480
+            exposed_on: 'datanode'
+        jn_webapp_https:
+            port: 8481
+            exposed_on: 'datanode'
