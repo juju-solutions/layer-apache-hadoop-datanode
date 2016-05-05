@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if ! charms.reactive is_state 'datanode.started'; then
+    action-fail 'DataNode not yet ready'
+    exit
+fi
+
+. /etc/environment
+cd ${HADOOP_HOME}/sbin
+su hdfs -c "./hadoop-daemon.sh stop journalnode"
+su hdfs -c "./hadoop-daemon.sh start journalnode"
+

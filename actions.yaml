@@ -1,0 +1,2 @@
+restart-journalnode:
+    description: Restart the hadoop journalnode daemon
